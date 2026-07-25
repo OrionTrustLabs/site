@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Orion Trust Labs" },
+      { title: "About - Orion Trust Labs" },
       { name: "description", content: "Cryptographers, engineers, and operators building trust infrastructure for the on-chain economy." },
-      { property: "og:title", content: "About — Orion Trust Labs" },
+      { property: "og:title", content: "About - Orion Trust Labs" },
       { property: "og:description", content: "Cryptographers and engineers building trust infrastructure." },
       { property: "og:url", content: "/about" },
     ],
@@ -20,7 +20,7 @@ function AboutPage() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <p className="text-sm uppercase tracking-widest text-primary">About</p>
         <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-4xl">We're building the trust layer for the digital economy.</h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Orion Trust Labs is an early-stage team working to remove trust assumptions from financial infrastructure — one proof at a time. We're pre-launch: no contracts deployed, no product shipped, and honest about it.</p>
+        <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Orion Trust Labs is an early-stage team working to remove trust assumptions from financial infrastructure - one proof at a time. We're pre-launch: no contracts deployed, no product shipped, and honest about it.</p>
       </section>
 
       <section className="border-y border-border bg-card/40">
@@ -44,8 +44,8 @@ function AboutPage() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {[
             { r: "Founder & CEO", b: "Cryptography and product background." },
-            { r: "Founding Engineer — Protocol", b: "Distributed systems and MPC." },
-            { r: "Founding Engineer — ZK", b: "STARK circuits and formal methods." },
+            { r: "Founding Engineer - Protocol", b: "Distributed systems and MPC." },
+            { r: "Founding Engineer - ZK", b: "STARK circuits and formal methods." },
           ].map((p) => (
             <article key={p.r} className="rounded-2xl border border-border bg-card p-6">
               <div className="h-14 w-14 rounded-full mb-4" style={{ background: "var(--gradient-primary)" }} />

@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Orion Trust Labs — Blockchain Infrastructure & Trust" },
+      { title: "Orion Trust Labs - Blockchain Infrastructure & Trust" },
       { name: "description", content: "Orion Trust Labs builds trust-minimized blockchain infrastructure, custody, and settlement rails for institutions." },
       { name: "author", content: "Orion Trust Labs" },
       { property: "og:title", content: "Orion Trust Labs" },

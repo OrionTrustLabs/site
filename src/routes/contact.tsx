@@ -4,9 +4,9 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Orion Trust Labs" },
+      { title: "Contact - Orion Trust Labs" },
       { name: "description", content: "Talk to our team about custody, settlement, or attestation infrastructure." },
-      { property: "og:title", content: "Contact — Orion Trust Labs" },
+      { property: "og:title", content: "Contact - Orion Trust Labs" },
       { property: "og:description", content: "Talk to our team." },
       { property: "og:url", content: "/contact" },
     ],
@@ -23,7 +23,7 @@ function ContactPage() {
         <div>
           <p className="text-sm uppercase tracking-widest text-primary">Contact</p>
           <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight">Let's talk about what you're building.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-xl">Whether you're an institution evaluating custody, a protocol integrating settlement, or a regulator with questions — we'd like to hear from you.</p>
+          <p className="mt-6 text-lg text-muted-foreground max-w-xl">Whether you're an institution evaluating custody, a protocol integrating settlement, or a regulator with questions - we'd like to hear from you.</p>
 
           <div className="mt-10 space-y-6 text-sm">
             {[

@@ -25,7 +25,7 @@ function Index() {
               </span>
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Orion Trust Labs is designing cryptographic infrastructure to let institutions custody, settle, and verify digital assets without compromise. We're pre-launch — building in the open and talking to design partners.
+              Orion Trust Labs is designing cryptographic infrastructure to let institutions custody, settle, and verify digital assets without compromise. We're pre-launch - building in the open and talking to design partners.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/solutions" className="rounded-md px-5 py-3 text-sm font-medium text-primary-foreground shadow-lg" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
@@ -88,7 +88,7 @@ function Index() {
           <p className="text-sm uppercase tracking-widest text-primary">Why Orion</p>
           <h2 className="mt-2 text-4xl font-semibold text-foreground">Verifiable by design. Regulated by default.</h2>
           <p className="mt-4 text-muted-foreground">
-            The Orion stack is being designed so every operation produces a cryptographic proof that regulators, auditors, and counterparties can verify — without granting them access to sensitive data.
+            The Orion stack is being designed so every operation produces a cryptographic proof that regulators, auditors, and counterparties can verify - without granting them access to sensitive data.
           </p>
           <ul className="mt-6 space-y-3 text-sm">
             {["Targeting SOC 2 Type II & ISO 27001 for launch","MPC signing with policy quorum enforcement","Open-source attestation clients, planned third-party audits","Incident response and SLA commitments at GA"].map(x => (
@@ -99,7 +99,7 @@ function Index() {
         <div className="rounded-2xl border border-border bg-card p-8 relative overflow-hidden">
           <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full blur-3xl opacity-30" style={{ background: "var(--gradient-primary)" }} />
           <pre className="relative text-xs text-foreground/90 font-mono leading-relaxed overflow-x-auto">
-{`# Illustrative CLI — product not yet released
+{`# Illustrative CLI - product not yet released
 $ orion verify --proof reserves.stark
 
 ✔ Merkle root anchored on-chain
@@ -107,7 +107,7 @@ $ orion verify --proof reserves.stark
 ✔ Signer quorum satisfied
 ✔ Attestation timestamped
 
-design preview — join the pilot at
+design preview - join the pilot at
 oriontrustlabs.com/contact`}
           </pre>
         </div>

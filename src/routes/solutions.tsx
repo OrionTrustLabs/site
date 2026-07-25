@@ -3,9 +3,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions — Orion Trust Labs" },
+      { title: "Solutions - Orion Trust Labs" },
       { name: "description", content: "Custody, settlement, and attestation infrastructure built for regulated digital-asset institutions." },
-      { property: "og:title", content: "Solutions — Orion Trust Labs" },
+      { property: "og:title", content: "Solutions - Orion Trust Labs" },
       { property: "og:description", content: "Custody, settlement, and attestation infrastructure." },
       { property: "og:url", content: "/solutions" },
     ],
@@ -30,7 +30,7 @@ const solutions = [
   {
     name: "Attestation Layer",
     tag: "Compliance",
-    body: "Zero-knowledge proofs of reserves, solvency, KYC status, and off-chain state — designed to be verifiable by regulators without exposing raw data.",
+    body: "Zero-knowledge proofs of reserves, solvency, KYC status, and off-chain state - designed to be verifiable by regulators without exposing raw data.",
     features: ["STARK-based proofs of reserve", "Selective KYC disclosures", "Public verifier endpoints (planned)", "Audit-ready proof archives"],
   },
   {
@@ -48,8 +48,8 @@ function SolutionsPage() {
         <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
         <div className="mx-auto max-w-7xl px-6 py-24">
           <p className="text-sm uppercase tracking-widest text-primary">Solutions</p>
-          <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-3xl">A full stack for institutional digital assets — in development.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Four modules being designed to interlock — or work on their own — to secure, move, and prove digital assets at scale. Nothing on this page is live yet; we're building toward a design-partner pilot.</p>
+          <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-3xl">A full stack for institutional digital assets - in development.</h1>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale. Nothing on this page is live yet; we're building toward a design-partner pilot.</p>
         </div>
       </section>
 

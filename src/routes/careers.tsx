@@ -3,9 +3,9 @@ import { createFileRoute } from "@tanstack/react-router";
 export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
-      { title: "Careers — Orion Trust Labs" },
+      { title: "Careers - Orion Trust Labs" },
       { name: "description", content: "Join Orion Trust Labs. Build trust-minimized infrastructure with cryptographers, engineers, and operators across Zurich, New York, and Singapore." },
-      { property: "og:title", content: "Careers — Orion Trust Labs" },
+      { property: "og:title", content: "Careers - Orion Trust Labs" },
       { property: "og:description", content: "Build trust-minimized infrastructure with us." },
       { property: "og:url", content: "/careers" },
     ],
@@ -21,7 +21,7 @@ const openings = [
 
 const values = [
   ["Proof over promise", "We verify, not assume. Every claim is backed by cryptography or evidence."],
-  ["Adversarial by default", "We design as if attackers are already inside the perimeter — because some day they might be."],
+  ["Adversarial by default", "We design as if attackers are already inside the perimeter - because some day they might be."],
   ["Open science", "We publish, peer-review, and open-source when it makes the ecosystem safer."],
   ["Operator discipline", "Reliability, runbooks, and incident transparency are part of the craft."],
 ];
@@ -41,7 +41,7 @@ function CareersPage() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <p className="text-sm uppercase tracking-widest text-primary">Careers</p>
         <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-4xl">Build the trust layer with us.</h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl">We're pre-launch and hiring a small founding team. If you want to make financial infrastructure verifiable, resilient, and beautiful under the hood — cryptographers, engineers, operators, and skeptics welcome.</p>
+        <p className="mt-6 text-lg text-muted-foreground max-w-2xl">We're pre-launch and hiring a small founding team. If you want to make financial infrastructure verifiable, resilient, and beautiful under the hood - cryptographers, engineers, operators, and skeptics welcome.</p>
       </section>
 
       <section className="border-y border-border bg-card/40">
