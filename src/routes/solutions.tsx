@@ -53,7 +53,7 @@ function SolutionsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24 grid gap-6 md:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
         {solutions.map((s) => (
           <article key={s.name} className="rounded-2xl border border-border bg-card p-8 relative overflow-hidden group">
             <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full blur-3xl opacity-0 group-hover:opacity-30 transition-opacity" style={{ background: "var(--gradient-primary)" }} />

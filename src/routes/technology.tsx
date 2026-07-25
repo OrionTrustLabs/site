@@ -48,7 +48,7 @@ function TechPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24 grid gap-6 md:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
         {pillars.map((p) => (
           <div key={p.n} className="rounded-2xl border border-border bg-card p-8">
             <div className="text-5xl font-semibold text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-primary)" }}>{p.n}</div>
