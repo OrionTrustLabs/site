@@ -1,0 +1,415 @@
+{
+  "applyEmail": "careers@oriontrustlabs.com",
+  "roles": [
+    {
+      "slug": "founding-cryptography-engineer",
+      "title": "Founding Cryptography Engineer",
+      "team": "Research",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Work from anywhere with overlap across EU / US / APAC when collaboration matters. Optional on-sites in Zurich, New York, or Singapore a few times a year.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["MPC", "ZK / STARKs", "Applied cryptography"],
+      "summary": "Design and implement the cryptographic primitives behind Orion's attestation and custody stack — from protocol design through production-ready libraries.",
+      "about": "As a founding cryptography engineer you will own the research-to-implementation path for threshold signatures, zero-knowledge attestation circuits, and formal arguments of security. You will work closely with protocol and product engineers to turn proofs into systems institutions can rely on.",
+      "responsibilities": [
+        "Design and specify MPC / threshold signing schemes (GG20, CGGMP21 and successors) for institutional custody",
+        "Prototype and harden STARK-based circuits for proofs of reserve, solvency, and compliance state",
+        "Write clear security models, threat analyses, and implementation guides for engineering partners",
+        "Review protocol changes for cryptographic soundness and side-channel risk",
+        "Publish selected results when open science strengthens the ecosystem"
+      ],
+      "requirements": [
+        "Deep fluency with applied cryptography (signatures, MPC, ZK, or related areas)",
+        "Experience taking cryptographic designs from paper or prototype into production code",
+        "Comfort reading academic literature and translating it into practical constraints",
+        "Strong written communication — specs and threat models matter as much as code",
+        "Bias toward verification: tests, formal methods, or adversarial review"
+      ],
+      "niceToHave": [
+        "Prior work on wallet / custody / HSM-adjacent systems",
+        "Experience with Lean, Coq, or Certora-style verification",
+        "Open-source cryptography library contributions",
+        "Familiarity with AWS Nitro Enclaves or confidential computing"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Dedicated research budget and conference travel",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Regular in-person team gatherings"
+      ]
+    },
+    {
+      "slug": "founding-mpc-protocol-engineer",
+      "title": "Founding MPC / Protocol Engineer",
+      "team": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Remote-first with async-friendly rituals. Core collaboration windows are flexible; we gather in person for deep work a few times a year.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["MPC", "Distributed systems", "Rust / Go"],
+      "summary": "Build the distributed signing cluster, policy quorum engine, and settlement pathways that turn cryptographic designs into reliable institutional infrastructure.",
+      "about": "You will be a founding protocol engineer responsible for the systems that run Orion's MPC signing nodes, enforce policy quorums, and settle with cryptographic receipts. Expect ownership from networking and reliability through API surfaces that design partners will integrate against.",
+      "responsibilities": [
+        "Implement and operate t-of-n MPC signing clusters with clear failure and recovery semantics",
+        "Build the policy engine for approvals, time locks, and hardware-attested signers",
+        "Design deterministic settlement flows and cryptographic receipts across L1/L2 paths",
+        "Own reliability: runbooks, observability, chaos drills, and incident response habits",
+        "Partner with cryptography research to ship secure, usable protocol surfaces"
+      ],
+      "requirements": [
+        "Strong systems / distributed-systems engineering background (Rust, Go, or similar)",
+        "Experience with consensus, networking, or high-availability services",
+        "Comfort with security-sensitive code and adversarial thinking",
+        "Ability to write clear interfaces and documentation for external integrators",
+        "Willingness to own production readiness from day one of a founding team"
+      ],
+      "niceToHave": [
+        "Hands-on MPC, DKG, or threshold signing implementations",
+        "Custody, exchange, or payments infrastructure experience",
+        "Familiarity with ISO 20022, PvP/DvP settlement, or similar rails",
+        "Prior work with enclaves, HSMs, or remote attestation"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "On-call stipend as production systems come online",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Travel support for partner and security reviews"
+      ]
+    },
+    {
+      "slug": "smart-contract-engineer",
+      "title": "Smart Contract Engineer",
+      "team": "Protocol",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote. Prefer meaningful overlap with protocol and security partners; timezone is flexible within that constraint.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Solidity", "Foundry", "EVM"],
+      "summary": "Own the on-chain settlement and attestation surfaces that institutions will trust with real capital — Solidity at the core, adversarial review as a habit.",
+      "about": "You will design, implement, and harden the smart contracts behind Orion's settlement rails and attestation anchors. This is not greenfield-for-demo work: every public function is a liability surface. You will set the bar for upgrade strategy, invariant testing, and audit readiness while the product is still taking shape — which means your decisions compound.",
+      "responsibilities": [
+        "Design and ship Solidity contracts for settlement, receipts, and on-chain attestation anchors",
+        "Define upgrade, pause, and access-control patterns that survive institutional due diligence",
+        "Build Foundry-based invariant, fuzz, and differential test suites as first-class deliverables",
+        "Partner with cryptography and protocol engineers so off-chain proofs and on-chain verification stay coherent",
+        "Lead audit preparation: threat models, known risks, and remediation with external reviewers"
+      ],
+      "requirements": [
+        "Deep Solidity / EVM fluency — storage layout, call semantics, and gas economics are second nature",
+        "Production experience shipping contracts that held real value or passed serious security review",
+        "Strong testing discipline with Foundry (or equivalent) including fuzzing and invariant strategies",
+        "Comfort writing precise specs and reviewing PRs for subtle footguns",
+        "Bias toward minimal surface area and explicit trust assumptions"
+      ],
+      "niceToHave": [
+        "Prior custody, settlement, or DeFi protocol work under regulatory or institutional constraints",
+        "Experience with formal verification tooling (Certora, Halmos, or similar)",
+        "Familiarity with account abstraction, multicall patterns, or cross-chain messaging risks",
+        "Published postmortems, audit reports, or open-source contract libraries"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Budget for audits, tooling, and security conferences",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Optional team gatherings in hub cities"
+      ]
+    },
+    {
+      "slug": "hardhat-engineer",
+      "title": "Smart Contract Tooling Engineer",
+      "team": "Protocol",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Remote-first across timezones. Pair closely with Solidity engineers; async-first with scheduled deep-dive sessions for release and audit cycles.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Hardhat", "TypeScript", "Solidity", "EVM tooling"],
+      "summary": "Build the Hardhat-centered developer and CI toolchain that keeps Orion's Solidity stack fast, reproducible, and audit-ready as complexity grows.",
+      "about": "Great contracts die in bad tooling. You will own Hardhat configuration, plugins, deployment pipelines, mainnet-fork testing, and the TypeScript glue that makes protocol work feel sharp for senior engineers. Your job is to remove friction from compile → test → simulate → deploy → verify — without sacrificing safety.",
+      "responsibilities": [
+        "Own Hardhat workspaces, networks, plugins, and reproducible local / CI environments",
+        "Build TypeScript tooling for deployments, upgrades, verification, and artifact publishing",
+        "Stand up mainnet-fork and scenario tests that catch integration bugs before audits do",
+        "Integrate gas reporting, coverage, static analysis, and artifact provenance into every PR",
+        "Partner with Smart Contract engineers so developer experience matches institutional rigor"
+      ],
+      "requirements": [
+        "Deep Hardhat experience in production Solidity monorepos (plugins, custom tasks, networks)",
+        "Strong TypeScript skills for scripting deployments, tests, and CI automation",
+        "Solid EVM mental model — you understand what your tooling is actually exercising",
+        "Experience designing CI that is both fast and trustworthy for contract changes",
+        "Obsession with reproducibility, clear docs, and ergonomics seniors will actually use"
+      ],
+      "niceToHave": [
+        "Authoring or maintaining Hardhat plugins",
+        "Familiarity with Foundry interop, dual-toolchain setups, or Tenderly / fork tooling",
+        "Experience with upgradeable proxies, CREATE2 factories, or multi-chain deploy matrices",
+        "Background supporting audit firms or internal security reviews with clean artifacts"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Budget for tooling, cloud forks, and developer conferences",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Direct impact on how the entire protocol team ships"
+      ]
+    },
+    {
+      "slug": "hardhat-smart-contract-engineer",
+      "title": "Smart Contract Engineer (Hardhat)",
+      "team": "Protocol",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote with scheduled pairing during design, audit, and release windows. Timezone flexible if you can overlap with Protocol for critical reviews.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Solidity", "Hardhat", "TypeScript", "EVM"],
+      "summary": "Write and harden production Solidity with Hardhat as your primary stack — tests, forks, deployments, and verification that institutional partners can trust.",
+      "about": "This role is for a senior Solidity engineer who ships contracts in Hardhat day-to-day: expressive TypeScript tests, mainnet forks, upgrade scripts, and clean verification flows. You will own protocol features end to end inside the Hardhat workspace — distinct from our Foundry-leaning Smart Contract Engineer track and from the Hardhat tooling role that builds the platform itself.",
+      "responsibilities": [
+        "Implement Solidity contracts for settlement, attestation anchors, and related protocol surfaces in Hardhat",
+        "Write rigorous Hardhat + TypeScript test suites, including fork-based integration and upgrade path coverage",
+        "Own deploy, simulate, and verify workflows for networks we support — with reproducible scripts and clear runbooks",
+        "Collaborate with security reviewers to triage findings and land remediations without slowing the roadmap",
+        "Raise the standard for readable contracts, explicit invariants, and PR-level threat notes"
+      ],
+      "requirements": [
+        "Senior Solidity ability with Hardhat as a primary professional toolchain",
+        "Strong TypeScript testing and scripting skills inside Hardhat projects",
+        "Production experience deploying and verifying contracts across environments",
+        "Security-minded review habits — you catch footguns before they become findings",
+        "Clear written communication for specs, rollout plans, and audit responses"
+      ],
+      "niceToHave": [
+        "Hardhat plugins, custom tasks, or advanced network configuration experience",
+        "Familiarity with OpenZeppelin upgrades, proxies, and multisig operations",
+        "Exposure to institutional / custody / settlement domains",
+        "Comfort collaborating with Foundry users in a multi-toolchain repo"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Budget for audits, Hardhat/cloud forks, and security conferences",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Optional team gatherings in hub cities"
+      ]
+    },
+    {
+      "slug": "tech-lead",
+      "title": "Tech Lead",
+      "team": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Remote-first",
+      "remoteDetails": "Remote-first with intentional overlap for architecture and hiring. Expect occasional travel for partner meetings and team offsites.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["React", "Node.js", "System design"],
+      "summary": "Set technical direction for a founding product org — architecture, delivery cadence, and the quality bar seniors expect when the stakes are institutional trust.",
+      "about": "Orion needs a tech lead who has already operated at senior+ altitude: someone who can hold product intent, security constraints, and shipping pressure in the same frame. You will shape how React clients, Node.js services, and protocol interfaces fit together, hire and mentor strong ICs, and keep the roadmap honest while we talk to design partners.",
+      "responsibilities": [
+        "Own end-to-end architecture across React surfaces, Node.js APIs, and protocol integration boundaries",
+        "Drive technical roadmap with founders — sequence risk, cut scope surgically, protect long-term leverage",
+        "Establish engineering standards: reviews, testing, observability, and incident habits from day one",
+        "Unblock senior engineers and raise the quality of design docs, ADRs, and tradeoff discussions",
+        "Partner with Security, Product, and design-partner conversations so technical reality stays visible"
+      ],
+      "requirements": [
+        "Track record leading multi-disciplinary engineering work on complex product systems",
+        "Hands-on credibility in modern web stacks (React + Node.js) plus sound distributed-systems instincts",
+        "Ability to make crisp architectural calls and explain them to both engineers and non-engineers",
+        "Experience raising the bar through hiring, mentoring, and rigorous but humane review culture",
+        "Comfort operating in ambiguity — pre-launch, high ownership, low process theater"
+      ],
+      "niceToHave": [
+        "Background in fintech, custody, payments, or other regulated infrastructure",
+        "Prior founding / early-stage tech lead experience",
+        "Familiarity with cryptographic or blockchain product constraints",
+        "History of shipping design-partner or enterprise-facing platforms"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Leadership support for hiring and mentoring",
+        "Travel budget for partners, conferences, and offsites",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits"
+      ]
+    },
+    {
+      "slug": "full-stack-engineer",
+      "title": "Full Stack Engineer",
+      "team": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote. Collaborate async by default with live sessions for design reviews and launches.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["React", "Node.js", "TypeScript"],
+      "summary": "Ship the product spine end to end — React experiences and Node.js services that make custody, settlement, and attestation usable for serious operators.",
+      "about": "You thrive owning features across the boundary: typed APIs, resilient Node.js services, and React interfaces that feel calm under complexity. At Orion you will connect institutional workflows to cryptographic infrastructure without burying users in protocol jargon — and you will care as much about failure modes as happy paths.",
+      "responsibilities": [
+        "Design and implement full-stack features spanning React clients and Node.js backends",
+        "Model APIs and domain flows for custody policies, settlement status, and attestation artifacts",
+        "Own reliability basics: validation, authz, idempotency, retries, and clear operator-facing errors",
+        "Instrument product paths so design partners and internal teams can debug with confidence",
+        "Collaborate with protocol and design to keep UX honest about what the system can and cannot guarantee"
+      ],
+      "requirements": [
+        "Senior-level fluency building production systems in React and Node.js (TypeScript preferred)",
+        "Strong product sense — you notice when an API or UI creates operational risk",
+        "Experience with authentication, authorization, and careful handling of sensitive workflows",
+        "Comfortable owning features from design discussion through production monitoring",
+        "Clear written communication for specs, PR descriptions, and tradeoff notes"
+      ],
+      "niceToHave": [
+        "Exposure to fintech, compliance tooling, or admin/operator consoles",
+        "Experience with TanStack, Vite, or similar modern React toolchains",
+        "Familiarity with event-driven architectures, queues, or audit logging",
+        "Interest in cryptography-adjacent product surfaces (proofs, keys, attestations)"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Learning budget for courses, books, and conferences",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Optional hub-city team gatherings"
+      ]
+    },
+    {
+      "slug": "frontend-engineer",
+      "title": "Frontend Engineer",
+      "team": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote with design-pairing sessions scheduled for mutual overlap. No office requirement.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["React", "TypeScript", "Design systems"],
+      "summary": "Craft the React interface layer for institutional operators — precise, fast, and trustworthy enough for high-stakes workflows.",
+      "about": "Institutional products fail when the UI is vague. You will build React experiences that make policy, settlement, and attestation state legible — dense when needed, quiet when not. You care about interaction design, performance, accessibility, and the difference between looking polished and being operable under pressure.",
+      "responsibilities": [
+        "Build and evolve React + TypeScript interfaces for operator and design-partner workflows",
+        "Translate complex protocol and custody concepts into clear information architecture",
+        "Advance the design system: components, patterns, and motion that reinforce trust rather than noise",
+        "Own frontend quality — typing, testing, performance budgets, and resilient loading/error states",
+        "Partner tightly with Design and backend engineers on contracts that keep the UI honest"
+      ],
+      "requirements": [
+        "Deep React expertise — component architecture, state, data fetching, and rendering performance",
+        "Strong TypeScript instincts and care for maintainable UI systems",
+        "Eye for craft: typography, spacing, empty states, and edge-case UX",
+        "Experience shipping complex apps (dashboards, consoles, or multi-step operational flows)",
+        "Habit of collaborating with design without waiting to be handed perfect specs"
+      ],
+      "niceToHave": [
+        "Design-system ownership or significant contribution in a prior role",
+        "Experience with TanStack Router / Query or comparable data-router stacks",
+        "Accessibility expertise (WCAG-minded implementation, keyboard flows)",
+        "Prior work on fintech, trading, or security-sensitive operator tools"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Design and frontend tooling budget",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Optional team gatherings for design crits and offsites"
+      ]
+    },
+    {
+      "slug": "backend-engineer",
+      "title": "Backend Engineer",
+      "team": "Engineering",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote. On-call expectations remain fair and compensated as production systems launch.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Node.js", "TypeScript", "APIs"],
+      "summary": "Build the Node.js services that enforce policy, orchestrate settlement, and expose clean APIs under institutional scrutiny.",
+      "about": "You will own backend systems where correctness beats cleverness. Policy engines, attestation pipelines, and settlement orchestration need APIs that are boring in the best way: typed, observable, and hard to misuse. You will make Node.js services that seniors trust to run close to cryptographic and custody boundaries.",
+      "responsibilities": [
+        "Design and implement Node.js + TypeScript services and APIs for core product workflows",
+        "Encode authorization, policy checks, and audit trails as first-class system behavior",
+        "Build durable job/orchestration paths for settlement and attestation with clear failure semantics",
+        "Define service boundaries, schemas, and SLIs that scale with design-partner load",
+        "Harden operational readiness: logging, metrics, tracing, and runbooks for critical paths"
+      ],
+      "requirements": [
+        "Senior Node.js experience building production APIs and background processing",
+        "Strong grasp of data modeling, consistency tradeoffs, and idempotent design",
+        "Security-aware engineering — authn/authz, secrets handling, and least privilege",
+        "Comfort owning services through production issues, not just green-path delivery",
+        "Ability to write crisp interface contracts for frontend and protocol consumers"
+      ],
+      "niceToHave": [
+        "Experience with Postgres or similar systems under transactional workloads",
+        "Familiarity with queues, workers, and exactly-once / at-least-once patterns",
+        "Background in payments, custody, KYC/AML tooling, or regulated APIs",
+        "Interest in integrating with MPC, HSM, or enclave-backed signing flows"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "On-call stipend when production coverage begins",
+        "Home-office stipend and hardware signing kit",
+        "Health coverage as we formalize benefits",
+        "Cloud and tooling budget for serious local/prod parity"
+      ]
+    },
+    {
+      "slug": "designer",
+      "title": "Designer",
+      "team": "Design",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote with scheduled design critiques and pairing across engineering. Occasional travel for partner workshops and brand shoots.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Product design", "Design systems", "React handoff"],
+      "summary": "Define the visual and interaction language of institutional trust — product design that makes cryptographic infrastructure feel clear, calm, and credible.",
+      "about": "Orion's brand and product must signal seriousness without sliding into generic fintech theater. You will own end-to-end product design for operator experiences and key marketing surfaces, working side-by-side with React engineers so what ships matches the intent. Seniors should feel the craft immediately.",
+      "responsibilities": [
+        "Lead product design for custody, settlement, and attestation workflows — flows, states, and edge cases",
+        "Build and maintain a coherent design system that engineers can implement faithfully in React",
+        "Shape brand expression across web surfaces so Orion feels distinct and institutional-grade",
+        "Prototype rapidly, test with design partners, and refine based on operational feedback",
+        "Partner with engineering early on feasibility, density, and motion — design is a team sport here"
+      ],
+      "requirements": [
+        "Portfolio showing complex product systems handled with clarity and restraint",
+        "Strength in interaction design for data-dense or high-stakes tools",
+        "Ability to create and evolve design systems used by real engineering teams",
+        "Excellent communication — you can defend decisions and absorb critique without ego",
+        "Comfort working directly in a fast founding environment with ambiguous problem statements"
+      ],
+      "niceToHave": [
+        "Experience designing for fintech, developer tools, or security products",
+        "Motion design skills that improve comprehension rather than decorate",
+        "Familiarity with designing for React component constraints",
+        "Prior work on brand systems for technical or B2B companies"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Budget for design tools, research participants, and conferences",
+        "Home-office stipend",
+        "Health coverage as we formalize benefits",
+        "Travel support for workshops and brand work"
+      ]
+    }
+  ]
+}

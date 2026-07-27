@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import techImg from "@/assets/technology.jpg";
+import { PageBanner } from "@/components/page-banner";
+import bannerTechnology from "@/assets/banner-technology.jpg";
 
 export const Route = createFileRoute("/technology")({
   head: () => ({
@@ -25,28 +26,13 @@ const pillars = [
 function TechPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 -z-10 opacity-70" style={{ background: "var(--gradient-glow)" }} />
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-20 grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <p className="text-sm uppercase tracking-widest text-primary">Technology</p>
-            <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight">Cryptography you can audit. Systems you can trust.</h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">Our design brief: combine threshold cryptography, zero-knowledge proofs, and formally verified smart contracts to eliminate trust assumptions wherever possible. This page describes the architecture we're building - no smart contracts or services are deployed yet.</p>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-3xl blur-3xl opacity-40" style={{ background: "var(--gradient-primary)" }} />
-            <img
-              src={techImg}
-              alt="Layered cryptographic protocol stack with glowing cyan planes"
-              width={1024}
-              height={1024}
-              className="relative w-full rounded-2xl border border-border object-cover aspect-square"
-              style={{ boxShadow: "var(--shadow-elegant)" }}
-            />
-          </div>
-        </div>
-      </section>
+      <PageBanner
+        image={bannerTechnology}
+        alt="Layered cryptographic planes representing the Orion protocol stack"
+        eyebrow="Technology"
+        title="Cryptography you can audit. Systems you can trust."
+        description="Our design brief: combine threshold cryptography, zero-knowledge proofs, and formally verified smart contracts to eliminate trust assumptions wherever possible. This page describes the architecture we're building - no smart contracts or services are deployed yet."
+      />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
         {pillars.map((p) => (

@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageBanner } from "@/components/page-banner";
+import bannerSolutions from "@/assets/banner-solutions.jpg";
 
 export const Route = createFileRoute("/solutions")({
   head: () => ({
@@ -44,14 +46,13 @@ const solutions = [
 function SolutionsPage() {
   return (
     <>
-      <section className="relative">
-        <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
-        <div className="mx-auto max-w-7xl px-6 py-24">
-          <p className="text-sm uppercase tracking-widest text-primary">Solutions</p>
-          <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-3xl">A full stack for institutional digital assets - in development.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl">Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale. Nothing on this page is live yet; we're building toward a design-partner pilot.</p>
-        </div>
-      </section>
+      <PageBanner
+        image={bannerSolutions}
+        alt="Parallel glowing rails representing institutional settlement infrastructure"
+        eyebrow="Solutions"
+        title="A full stack for institutional digital assets - in development."
+        description="Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale. Nothing on this page is live yet; we're building toward a design-partner pilot."
+      />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
         {solutions.map((s) => (
@@ -75,7 +76,7 @@ function SolutionsPage() {
         <div className="rounded-2xl border border-border p-12 text-center bg-card/40">
           <h3 className="text-3xl font-semibold text-foreground">Not sure where to start?</h3>
           <p className="mt-3 text-muted-foreground">Our solutions engineers will map your workflow to the right modules.</p>
-          <Link to="/contact" className="mt-6 inline-flex rounded-md px-5 py-3 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>Schedule a call</Link>
+          <Link to="/contact" className="mt-6 inline-flex rounded-md px-5 py-3 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>Contact us</Link>
         </div>
       </section>
     </>

@@ -1,4 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
+import { PageBanner } from "@/components/page-banner";
+import bannerCareers from "@/assets/banner-careers.jpg";
+import { careerTeams, careers, filterCareers } from "@/lib/careers";
 
 export const Route = createFileRoute("/careers")({
   head: () => ({
@@ -13,11 +17,6 @@ export const Route = createFileRoute("/careers")({
   }),
   component: CareersPage,
 });
-
-const openings = [
-  { title: "Founding Cryptography Engineer", team: "Research", location: "Remote", type: "Full-time" },
-  { title: "Founding MPC / Protocol Engineer", team: "Engineering", location: "Remote", type: "Full-time" },
-];
 
 const values = [
   ["Proof over promise", "We verify, not assume. Every claim is backed by cryptography or evidence."],
@@ -36,13 +35,19 @@ const benefits = [
 ];
 
 function CareersPage() {
+  const [query, setQuery] = useState("");
+  const [team, setTeam] = useState("All");
+  const filteredRoles = filterCareers(careers.roles, query, team);
+
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="text-sm uppercase tracking-widest text-primary">Careers</p>
-        <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight max-w-4xl">Build the trust layer with us.</h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl">We're pre-launch and hiring a small founding team. If you want to make financial infrastructure verifiable, resilient, and beautiful under the hood - cryptographers, engineers, operators, and skeptics welcome.</p>
-      </section>
+      <PageBanner
+        image={bannerCareers}
+        alt="Ascending planes of light representing building a founding team"
+        eyebrow="Careers"
+        title="Build the trust layer with us."
+        description="We're hiring members of a large founding team. If you want to make financial infrastructure verifiable, resilient, and beautiful under the hood - cryptographers, engineers, operators, and skeptics welcome."
+      />
 
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 py-20 grid gap-8 md:grid-cols-3">
@@ -60,29 +65,110 @@ function CareersPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <h2 className="text-3xl font-semibold text-foreground">Open roles</h2>
-        <div className="mt-10 space-y-4">
-          {openings.map((job) => (
-            <div key={job.title} className="group rounded-2xl border border-border bg-card p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 transition-colors hover:border-primary/50">
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">{job.title}</h3>
-                <div className="mt-1 flex flex-wrap gap-3 text-xs text-muted-foreground">
-                  <span className="text-primary uppercase tracking-wider">{job.team}</span>
-                  <span>{job.location}</span>
-                  <span>{job.type}</span>
-                </div>
-              </div>
-              <a
-                href="mailto:careers@oriontrustlabs.com"
-                className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 shrink-0"
-                style={{ background: "var(--gradient-primary)" }}
-              >
-                Apply
-              </a>
-            </div>
-          ))}
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 className="text-3xl font-semibold text-foreground">Open roles</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {filteredRoles.length} of {careers.roles.length} roles
+            </p>
+          </div>
         </div>
-        <p className="mt-8 text-sm text-muted-foreground">Don't see a fit? Send your best work to <a href="mailto:careers@oriontrustlabs.com" className="text-primary hover:underline">careers@oriontrustlabs.com</a>.</p>
+
+        <div className="mt-8 space-y-4">
+          <label className="block">
+            <span className="sr-only">Search roles</span>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by keyword — Solidity, React, MPC…"
+              className="w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+            />
+          </label>
+
+          <div className="flex flex-wrap gap-2">
+            {careerTeams.map((teamName) => {
+              const active = team === teamName;
+              return (
+                <button
+                  key={teamName}
+                  type="button"
+                  onClick={() => setTeam(teamName)}
+                  className={`rounded-full border px-3 py-1.5 text-xs font-medium transition-colors ${
+                    active
+                      ? "border-primary bg-primary/15 text-primary"
+                      : "border-border bg-card text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {teamName}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="mt-10 space-y-4">
+          {filteredRoles.length === 0 ? (
+            <div className="rounded-2xl border border-border bg-card/40 p-10 text-center">
+              <p className="text-foreground font-medium">No roles match that search.</p>
+              <p className="mt-2 text-sm text-muted-foreground">Try another keyword or clear the team filter.</p>
+              <button
+                type="button"
+                onClick={() => {
+                  setQuery("");
+                  setTeam("All");
+                }}
+                className="mt-5 text-sm text-primary hover:underline"
+              >
+                Clear filters
+              </button>
+            </div>
+          ) : (
+            filteredRoles.map((job) => (
+              <Link
+                key={job.slug}
+                to="/careers/$slug"
+                params={{ slug: job.slug }}
+                className="group block rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/50"
+              >
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors">{job.title}</h3>
+                    <div className="mt-1 flex flex-wrap gap-3 text-xs text-muted-foreground">
+                      <span className="text-primary uppercase tracking-wider">{job.team}</span>
+                      <span>{job.remoteOption}</span>
+                      <span>{job.type}</span>
+                    </div>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {job.stack.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-md border border-border bg-background/60 px-2 py-0.5 text-xs text-muted-foreground"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="mt-3 text-sm text-muted-foreground max-w-2xl leading-relaxed">{job.summary}</p>
+                  </div>
+                  <span
+                    className="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-primary-foreground shrink-0 self-start md:self-center"
+                    style={{ background: "var(--gradient-primary)" }}
+                  >
+                    View role
+                  </span>
+                </div>
+              </Link>
+            ))
+          )}
+        </div>
+        <p className="mt-8 text-sm text-muted-foreground">
+          Don't see a fit? Send your best work to{" "}
+          <a href={`mailto:${careers.applyEmail}`} className="text-primary hover:underline">
+            {careers.applyEmail}
+          </a>
+          .
+        </p>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24 grid gap-16 lg:grid-cols-2">

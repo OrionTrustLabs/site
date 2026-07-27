@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/hero.jpg";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { PageBanner } from "@/components/page-banner";
+import bannerHome from "@/assets/banner-home.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -9,47 +9,30 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10" style={{ background: "var(--gradient-hero)" }} />
-        <div className="absolute inset-0 -z-10 opacity-70" style={{ background: "var(--gradient-glow)" }} />
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-32 grid gap-16 lg:grid-cols-2 lg:items-center">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/50 px-3 py-1 text-xs text-muted-foreground">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-              In development · Pre-launch
-            </span>
-            <h1 className="mt-6 text-5xl md:text-6xl font-semibold tracking-tight text-foreground leading-[1.05]">
-              Trust, engineered at the{" "}
-              <span className="bg-clip-text text-transparent" style={{ backgroundImage: "var(--gradient-primary)" }}>
-                protocol layer.
-              </span>
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl">
-              Orion Trust Labs is designing cryptographic infrastructure to let institutions custody, settle, and verify digital assets without compromise. We're pre-launch - building in the open and talking to design partners.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/solutions" className="rounded-md px-5 py-3 text-sm font-medium text-primary-foreground shadow-lg" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
-                What we're building
-              </Link>
-              <Link to="/technology" className="rounded-md border border-border bg-card/40 px-5 py-3 text-sm font-medium text-foreground hover:bg-card transition-colors">
-                Our approach
-              </Link>
-            </div>
-            <dl className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-              {[["2026", "Founded"], ["Stealth", "Current stage"], ["Open", "Design partners"]].map(([v, l]) => (
-                <div key={l}>
-                  <dt className="text-2xl font-semibold text-foreground">{v}</dt>
-                  <dd className="text-xs text-muted-foreground mt-1">{l}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-          <div className="relative">
-            <div className="absolute -inset-6 rounded-3xl blur-3xl opacity-40" style={{ background: "var(--gradient-primary)" }} />
-            <img src={heroImg} alt="Blockchain mesh network visualization" width={1024} height={1024} className="relative rounded-2xl border border-border" style={{ boxShadow: "var(--shadow-elegant)" }} />
-          </div>
+      <PageBanner
+        image={bannerHome}
+        alt="Cyan mesh network representing protocol-layer trust"
+        eyebrow="Orion Trust Labs"
+        title="Trust, engineered at the protocol layer."
+        description="Orion Trust Labs is designing cryptographic infrastructure to let institutions custody, settle, and verify digital assets without compromise. We're pre-launch - building in the open and talking to design partners."
+      >
+        <div className="flex flex-wrap gap-3">
+          <Link to="/solutions" className="rounded-md px-5 py-3 text-sm font-medium text-primary-foreground shadow-lg" style={{ background: "var(--gradient-primary)", boxShadow: "var(--shadow-glow)" }}>
+            What we're building
+          </Link>
+          <Link to="/technology" className="rounded-md border border-border bg-card/40 px-5 py-3 text-sm font-medium text-foreground hover:bg-card transition-colors">
+            Our approach
+          </Link>
         </div>
-      </section>
+        <dl className="mt-10 grid grid-cols-3 gap-6 max-w-md">
+          {[["2026", "Founded"], ["Stealth", "Current stage"]].map(([v, l]) => (
+            <div key={l}>
+              <dt className="text-2xl font-semibold text-foreground">{v}</dt>
+              <dd className="text-xs text-muted-foreground mt-1">{l}</dd>
+            </div>
+          ))}
+        </dl>
+      </PageBanner>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="flex items-end justify-between mb-12">
@@ -74,14 +57,14 @@ function Index() {
         </div>
       </section>
 
-      <section className="border-y border-border bg-card/40">
+      {/* <section className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 py-16 text-center">
           <p className="text-xs uppercase tracking-widest text-primary">Design partner program</p>
           <h3 className="mt-3 text-2xl font-semibold text-foreground max-w-2xl mx-auto">We're onboarding a small cohort of institutions to shape the v1 product.</h3>
           <p className="mt-3 text-sm text-muted-foreground max-w-xl mx-auto">If you're a fund, exchange, or custodian exploring cryptographic settlement, we'd like to talk.</p>
           <Link to="/contact" className="mt-6 inline-flex rounded-md px-5 py-3 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>Get in touch</Link>
         </div>
-      </section>
+      </section> */}
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-12 md:grid-cols-2 items-center">
         <div>

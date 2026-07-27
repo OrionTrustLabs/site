@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { PageBanner } from "@/components/page-banner";
+import bannerContact from "@/assets/banner-contact.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -19,13 +21,17 @@ function ContactPage() {
   const [sent, setSent] = useState(false);
   return (
     <>
+      <PageBanner
+        image={bannerContact}
+        alt="Two connected nodes of light representing communication"
+        eyebrow="Contact"
+        title="Let's talk about what you're building."
+        description="Whether you're an institution evaluating custody, a protocol integrating settlement, or a regulator with questions - we'd like to hear from you."
+      />
+
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-16 lg:grid-cols-2">
         <div>
-          <p className="text-sm uppercase tracking-widest text-primary">Contact</p>
-          <h1 className="mt-3 text-5xl md:text-6xl font-semibold text-foreground tracking-tight">Let's talk about what you're building.</h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-xl">Whether you're an institution evaluating custody, a protocol integrating settlement, or a regulator with questions - we'd like to hear from you.</p>
-
-          <div className="mt-10 space-y-6 text-sm">
+          <div className="space-y-6 text-sm">
             {[
               ["Sales", "sales@oriontrustlabs.com"],
               ["Security disclosures", "security@oriontrustlabs.com"],
