@@ -50,8 +50,8 @@ function SolutionsPage() {
         image={bannerSolutions}
         alt="Parallel glowing rails representing institutional settlement infrastructure"
         eyebrow="Solutions"
-        title="A full stack for institutional digital assets - in development."
-        description="Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale. Nothing on this page is live yet; we're building toward a design-partner pilot."
+        title="A full stack for institutional digital assets"
+        description="Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">

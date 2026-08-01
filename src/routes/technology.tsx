@@ -31,7 +31,7 @@ function TechPage() {
         alt="Layered cryptographic planes representing the Orion protocol stack"
         eyebrow="Technology"
         title="Cryptography you can audit. Systems you can trust."
-        description="Our design brief: combine threshold cryptography, zero-knowledge proofs, and formally verified smart contracts to eliminate trust assumptions wherever possible. This page describes the architecture we're building - no smart contracts or services are deployed yet."
+        description="Our design brief: combine threshold cryptography, zero-knowledge proofs, and formally verified smart contracts to eliminate trust assumptions wherever possible. This page describes the architecture we're building."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">

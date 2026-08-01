@@ -24,7 +24,7 @@ export const Route = createFileRoute("/about")({
 const team = [
   { role: "Founder & CEO", img: memberCeo },
   { role: "Investor & Advisor", img: memberAdvisor },
-  { role: "Business Development Manager", img: memberBizdev },
+  // { role: "Business Development Manager", img: memberBizdev },
   { role: "Operations Manager", img: memberOps },
   { role: "Head of Recruitment", img: memberRecruitment },
 ];
@@ -37,7 +37,7 @@ function AboutPage() {
         alt="Constellation of connected lights representing a shared founding mission"
         eyebrow="About"
         title="We're building the trust layer for the digital economy."
-        description="Orion Trust Labs is an early-stage team working to remove trust assumptions from financial infrastructure - one proof at a time. We're pre-launch: no contracts deployed, no product shipped, and honest about it."
+        description="Orion Trust Labs is a team working to remove trust assumptions from financial infrastructure - one proof at a time."
       />
 
       <section className="border-y border-border bg-card/40">
@@ -57,7 +57,7 @@ function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-6 py-24">
         <h2 className="text-3xl font-semibold text-foreground">Team</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {team.map((p) => (
             <article key={p.role} className="rounded-2xl border border-border bg-card p-6 text-center">
               <img
@@ -65,7 +65,7 @@ function AboutPage() {
                 alt={p.role}
                 width={160}
                 height={160}
-                className="mx-auto h-24 w-24 rounded-full object-cover border-2 border-border"
+                className="mx-auto h-30 w-30 rounded-full object-cover border-2 border-border"
               />
               <div className="mt-4 text-sm font-medium text-foreground">{p.role}</div>
             </article>
