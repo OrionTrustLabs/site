@@ -8,7 +8,7 @@ export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
       { title: "Careers - Orion Trust Labs" },
-      { name: "description", content: "Join Orion Trust Labs. Build trust-minimized infrastructure with cryptographers, engineers, and operators across Zurich, New York, and Singapore." },
+      { name: "description", content: "Join Orion Trust Labs. Build trust-minimized infrastructure with cryptographers, engineers, and operators." },
       { property: "og:title", content: "Careers - Orion Trust Labs" },
       { property: "og:description", content: "Build trust-minimized infrastructure with us." },
       { property: "og:url", content: "/careers" },

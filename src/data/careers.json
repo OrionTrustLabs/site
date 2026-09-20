@@ -8,7 +8,7 @@
       "location": "Remote",
       "type": "Full-time",
       "remoteOption": "Fully remote",
-      "remoteDetails": "Work from anywhere with overlap across EU / US / APAC when collaboration matters. Optional on-sites in Zurich, New York, or Singapore a few times a year.",
+      "remoteDetails": "Work from anywhere with overlap across EU / US / APAC when collaboration matters.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["MPC", "ZK / STARKs", "Applied cryptography"],
       "summary": "Design and implement the cryptographic primitives behind Orion's attestation and custody stack — from protocol design through production-ready libraries.",

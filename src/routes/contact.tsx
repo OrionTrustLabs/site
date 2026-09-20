@@ -35,7 +35,7 @@ function ContactPage() {
             {[
               ["Sales", "sales@oriontrustlabs.com"],
               ["Security disclosures", "security@oriontrustlabs.com"],
-              ["Press", "press@oriontrustlabs.com"],
+              // ["Press", "press@oriontrustlabs.com"],
             ].map(([t, e]) => (
               <div key={t}>
                 <div className="text-xs uppercase tracking-widest text-primary">{t}</div>
@@ -44,11 +44,11 @@ function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
-            {[["Zurich", "Bahnhofstrasse 45"], ["New York", "1 World Trade Center"], ["Singapore", "Marina Bay Financial"]].map(([c, a]) => (
+          <div className="mt-10 grid grid-cols-5 gap-6 max-w-md">
+            {[["Zurich", "Bahnhofstrasse 45"], ["London", "Marina Bay Financial"], ["New York", "1 World Trade Center"]].map(([c, a]) => (
               <div key={c}>
                 <div className="text-sm font-semibold text-foreground">{c}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{a}</div>
+                {/* <div className="mt-1 text-xs text-muted-foreground">{a}</div> */}
               </div>
             ))}
           </div>
