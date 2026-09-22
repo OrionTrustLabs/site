@@ -176,9 +176,6 @@ function SiteFooter() {
       <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-2">
-            <span className="relative inline-flex h-7 w-7 items-center justify-center rounded-md" style={{ background: "var(--gradient-primary)" }}>
-              <span className="h-2.5 w-2.5 rounded-full bg-background" />
-            </span>
             <span className="font-semibold text-foreground">Orion Trust Labs</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
