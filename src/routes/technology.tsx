@@ -5,10 +5,10 @@ import bannerTechnology from "@/assets/banner-technology.jpg";
 export const Route = createFileRoute("/technology")({
   head: () => ({
     meta: [
-      { title: "Technology - Orion Trust Labs" },
-      { name: "description", content: "Under the hood: MPC, zero-knowledge proofs, hardware attestation, and formally verified settlement." },
-      { property: "og:title", content: "Technology - Orion Trust Labs" },
-      { property: "og:description", content: "MPC, zero-knowledge proofs, and formally verified settlement." },
+      { title: "Audit Methodology - Orion Trust Labs" },
+      { name: "description", content: "How Orion Trust Labs audits smart contracts: manual review, tooling, threat modeling, and remediation." },
+      { property: "og:title", content: "Audit Methodology - Orion Trust Labs" },
+      { property: "og:description", content: "Smart contract audit methodology and tooling." },
       { property: "og:url", content: "/technology" },
     ],
     links: [{ rel: "canonical", href: "/technology" }],
@@ -17,10 +17,26 @@ export const Route = createFileRoute("/technology")({
 });
 
 const pillars = [
-  { n: "01", t: "Threshold Cryptography", d: "Planned GG20 / CGGMP21 MPC signing schemes. No single signer ever holds a full key - quorums enforced across geographically distributed nodes." },
-  { n: "02", t: "Zero-Knowledge Proofs", d: "STARK circuits designed to prove solvency, reserves, and compliance state so regulators verify math, not raw ledgers." },
-  { n: "03", t: "Hardware Attestation", d: "Signers will run inside AWS Nitro Enclaves or Intel TDX, with boot-time attestation published on-chain." },
-  { n: "04", t: "Formal Verification", d: "Settlement contracts intended to be proven correct in Lean and Certora so critical paths have no untested edge cases." },
+  {
+    n: "01",
+    t: "Scope & Threat Modeling",
+    d: "We map assets, trust boundaries, and attacker goals before reading code — so review time targets what can actually lose funds or break invariants.",
+  },
+  {
+    n: "02",
+    t: "Manual Smart Contract Review",
+    d: "Senior auditors trace Solidity logic, storage, and external calls. We focus on reentrancy, access control, oracle manipulation, upgradeability, and economic exploits.",
+  },
+  {
+    n: "03",
+    t: "Automated & Differential Testing",
+    d: "Foundry, Hardhat, fuzzing, and static analysis augment manual work — never replace it. We use tooling to expand coverage and confirm exploit paths.",
+  },
+  {
+    n: "04",
+    t: "Report & Remediation",
+    d: "Findings are severity-ranked with clear impact, reproduction steps, and fix guidance. Re-audits verify patches before you ship or publish.",
+  },
 ];
 
 function TechPage() {
@@ -28,16 +44,18 @@ function TechPage() {
     <>
       <PageBanner
         image={bannerTechnology}
-        alt="Layered cryptographic planes representing the Orion protocol stack"
-        eyebrow="Technology"
-        title="Cryptography you can audit. Systems you can trust."
-        description="Our design brief: combine threshold cryptography, zero-knowledge proofs, and formally verified smart contracts to eliminate trust assumptions wherever possible. This page describes the architecture we're building."
+        alt="Layered planes representing structured audit depth"
+        eyebrow="Methodology"
+        title="How we make contracts safer."
+        description="Our stack is an audit methodology — not a custody product. Every engagement combines adversarial thinking, deep Solidity expertise, and tooling chosen for signal, not checkbox compliance."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
         {pillars.map((p) => (
           <div key={p.n} className="rounded-2xl border border-border bg-card p-8">
-            <div className="text-5xl font-semibold text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-primary)" }}>{p.n}</div>
+            <div className="text-5xl font-semibold text-transparent bg-clip-text" style={{ backgroundImage: "var(--gradient-primary)" }}>
+              {p.n}
+            </div>
             <h3 className="mt-4 text-xl font-semibold text-foreground">{p.t}</h3>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.d}</p>
           </div>
@@ -46,14 +64,16 @@ function TechPage() {
 
       <section className="border-y border-border bg-card/40">
         <div className="mx-auto max-w-7xl px-6 py-20">
-          <h2 className="text-3xl font-semibold text-foreground">The Orion architecture</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl">A modular stack - each layer independently auditable, replaceable, and proven correct.</p>
+          <h2 className="text-3xl font-semibold text-foreground">Typical audit workflow</h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl">
+            Engagements are structured so clients always know what stage we are in and what deliverables to expect.
+          </p>
           <ul className="mt-10 grid gap-4 md:grid-cols-2 max-w-4xl">
             {[
-              ["Attestation Layer", "STARK proofs"],
-              ["Settlement Engine", "Formally verified"],
-              ["MPC Signing Cluster", "t-of-n quorum"],
-              ["Hardware Root of Trust", "Nitro / TDX"],
+              ["Kickoff", "Scope, repos, deployments, docs"],
+              ["Review", "Manual + automated analysis"],
+              ["Findings", "Draft report & client Q&A"],
+              ["Remediation", "Fix review & final report"],
             ].map(([t, d]) => (
               <li key={t} className="rounded-xl border border-border bg-background/60 px-5 py-4 flex items-baseline justify-between gap-4">
                 <span className="font-medium text-foreground">{t}</span>
@@ -65,13 +85,13 @@ function TechPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <h2 className="text-3xl font-semibold text-foreground">Security posture (target)</h2>
+        <h2 className="text-3xl font-semibold text-foreground">Tooling & standards</h2>
         <div className="mt-8 grid gap-4 md:grid-cols-4">
           {[
-            ["SOC 2 Type II", "Targeted for launch"],
-            ["ISO 27001", "Targeted for launch"],
-            ["Bug Bounty", "Public program planned at GA"],
-            ["Third-Party Audits", "Engagements to be announced"],
+            ["Solidity / EVM", "Primary audit surface"],
+            ["Foundry & Hardhat", "Tests, forks, fuzz"],
+            ["Static analysis", "Slither, custom checks"],
+            ["Disclosure", "Coordinated response"],
           ].map(([t, d]) => (
             <div key={t} className="rounded-xl border border-border bg-card p-5">
               <div className="text-sm font-semibold text-foreground">{t}</div>

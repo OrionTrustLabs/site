@@ -5,10 +5,10 @@ import bannerSolutions from "@/assets/banner-solutions.jpg";
 export const Route = createFileRoute("/solutions")({
   head: () => ({
     meta: [
-      { title: "Solutions - Orion Trust Labs" },
-      { name: "description", content: "Custody, settlement, and attestation infrastructure built for regulated digital-asset institutions." },
-      { property: "og:title", content: "Solutions - Orion Trust Labs" },
-      { property: "og:description", content: "Custody, settlement, and attestation infrastructure." },
+      { title: "Security Services - Orion Trust Labs" },
+      { name: "description", content: "Smart contract audits, pre-launch reviews, and ongoing security advisory from Orion Trust Labs." },
+      { property: "og:title", content: "Security Services - Orion Trust Labs" },
+      { property: "og:description", content: "Smart contract auditing and security reviews." },
       { property: "og:url", content: "/solutions" },
     ],
     links: [{ rel: "canonical", href: "/solutions" }],
@@ -16,30 +16,30 @@ export const Route = createFileRoute("/solutions")({
   component: SolutionsPage,
 });
 
-const solutions = [
+const services = [
   {
-    name: "Institutional Custody",
-    tag: "Custody",
-    body: "MPC key management with hardware-anchored signers, policy quorums, and cold-warm-hot vault tiers. Targeting SOC 2 Type II and ISO 27001 by GA.",
-    features: ["Threshold MPC (t-of-n)", "HSM & Nitro Enclave signing", "Policy engine with time locks", "Insurance partners in scoping"],
+    name: "Smart Contract Audits",
+    tag: "Core",
+    body: "Our primary offering. Full-scope review of Solidity codebases — architecture, access control, economic logic, and integration risk — with a report your team and partners can rely on.",
+    features: ["Threat modeling & scope workshop", "Manual line-by-line review", "Automated analysis where useful", "Severity-ranked findings + PoCs"],
   },
   {
-    name: "Settlement Rails",
-    tag: "Payments",
-    body: "Designing deterministic atomic settlement across L1s, L2s, and traditional rails, with cryptographic receipts for every leg of a trade.",
-    features: ["Atomic multi-chain swaps", "PvP and DvP settlement", "Fast-finality architecture", "ISO 20022 adapters planned"],
+    name: "Pre-Launch & Upgrade Reviews",
+    tag: "Launch",
+    body: "Time-boxed engagements before mainnet, token launch, or proxy upgrades. We prioritize exploit paths that could cause immediate loss of funds or governance capture.",
+    features: ["Upgrade & migration paths", "Admin key & timelock review", "Oracle & external call surfaces", "Go / no-go readiness summary"],
   },
   {
-    name: "Attestation Layer",
-    tag: "Compliance",
-    body: "Zero-knowledge proofs of reserves, solvency, KYC status, and off-chain state - designed to be verifiable by regulators without exposing raw data.",
-    features: ["STARK-based proofs of reserve", "Selective KYC disclosures", "Public verifier endpoints (planned)", "Audit-ready proof archives"],
+    name: "Remediation & Re-Audit",
+    tag: "Follow-up",
+    body: "After your team lands fixes, we verify remediations, close findings, and update the report for investors, exchanges, and integrators.",
+    features: ["Fix verification", "Regression-focused re-review", "Updated audit letter", "Optional public disclosure support"],
   },
   {
-    name: "Validator Operations",
-    tag: "Staking",
-    body: "Non-custodial staking with slashing protection and 24/7 SRE monitoring. Network coverage expanding as we approach launch.",
-    features: ["Multi-network coverage", "Slashing protection roadmap", "Distributed validator tech (DVT)", "Real-time reward dashboards"],
+    name: "Security Advisory",
+    tag: "Partnership",
+    body: "Retainer-style support for teams shipping frequently — design reviews, incident triage, and auditor-on-call during critical releases.",
+    features: ["Architecture review sessions", "Release gate checklists", "Incident response coordination", "Team training & secure SDLC"],
   },
 ];
 
@@ -48,14 +48,14 @@ function SolutionsPage() {
     <>
       <PageBanner
         image={bannerSolutions}
-        alt="Parallel glowing rails representing institutional settlement infrastructure"
-        eyebrow="Solutions"
-        title="A full stack for institutional digital assets"
-        description="Four modules being designed to interlock - or work on their own - to secure, move, and prove digital assets at scale."
+        alt="Parallel glowing rails representing structured security review"
+        eyebrow="Security services"
+        title="Auditing is our main field. Safer contracts are the outcome."
+        description="Orion Trust Labs is a security company — not a custody or settlement product vendor. Smart contract security is our proposal to the market: rigorous audits that help teams ship with confidence."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 grid gap-6 md:grid-cols-2">
-        {solutions.map((s) => (
+        {services.map((s) => (
           <article key={s.name} className="rounded-2xl border border-border bg-card p-8 relative overflow-hidden group">
             <div className="absolute -top-16 -right-16 h-40 w-40 rounded-full blur-3xl opacity-0 group-hover:opacity-30 transition-opacity" style={{ background: "var(--gradient-primary)" }} />
             <div className="relative">
@@ -64,7 +64,10 @@ function SolutionsPage() {
               <p className="mt-3 text-muted-foreground text-sm leading-relaxed">{s.body}</p>
               <ul className="mt-6 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
                 {s.features.map((f) => (
-                  <li key={f} className="flex gap-2 text-muted-foreground"><span className="mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />{f}</li>
+                  <li key={f} className="flex gap-2 text-muted-foreground">
+                    <span className="mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />
+                    {f}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -74,9 +77,11 @@ function SolutionsPage() {
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <div className="rounded-2xl border border-border p-12 text-center bg-card/40">
-          <h3 className="text-3xl font-semibold text-foreground">Not sure where to start?</h3>
-          <p className="mt-3 text-muted-foreground">Our solutions engineers will map your workflow to the right modules.</p>
-          <Link to="/contact" className="mt-6 inline-flex rounded-md px-5 py-3 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>Contact us</Link>
+          <h3 className="text-3xl font-semibold text-foreground">Not sure which engagement fits?</h3>
+          <p className="mt-3 text-muted-foreground">Share your repo, timeline, and deployment context — we will recommend scope and next steps.</p>
+          <Link to="/contact" className="mt-6 inline-flex rounded-md px-5 py-3 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>
+            Request a quote
+          </Link>
         </div>
       </section>
     </>

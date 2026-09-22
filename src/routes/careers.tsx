@@ -8,9 +8,9 @@ export const Route = createFileRoute("/careers")({
   head: () => ({
     meta: [
       { title: "Careers - Orion Trust Labs" },
-      { name: "description", content: "Join Orion Trust Labs. Build trust-minimized infrastructure with cryptographers, engineers, and operators." },
+      { name: "description", content: "Join Orion Trust Labs. Smart contract auditors, security researchers, and engineers making contracts safer." },
       { property: "og:title", content: "Careers - Orion Trust Labs" },
-      { property: "og:description", content: "Build trust-minimized infrastructure with us." },
+      { property: "og:description", content: "Join our smart contract security team." },
       { property: "og:url", content: "/careers" },
     ],
     links: [{ rel: "canonical", href: "/careers" }],
@@ -31,7 +31,7 @@ const benefits = [
   "Research budget + conference travel",
   "Health coverage as we formalize benefits",
   "Regular in-person team gatherings",
-  "Hardware signing kit for every engineer",
+  "Security research tooling budget",
 ];
 
 function CareersPage() {
@@ -45,8 +45,8 @@ function CareersPage() {
         image={bannerCareers}
         alt="Ascending planes of light representing building a founding team"
         eyebrow="Careers"
-        title="Build the trust layer with us."
-        description="We're hiring members of a large founding team. If you want to make financial infrastructure verifiable, resilient, and beautiful under the hood - cryptographers, engineers, operators, and skeptics welcome."
+        title="Help us make every contract safer."
+        description="We're hiring auditors, security researchers, and engineers who care about adversarial review, clear reports, and raising the bar for on-chain safety."
       />
 
       <section className="border-y border-border bg-card/40">
@@ -67,7 +67,7 @@ function CareersPage() {
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="text-3xl font-semibold text-foreground">Open roles</h2>
+            <h2 className="text-3xl font-semibold text-foreground">Open roles</h2><p className="text-muted-foreground">(Plan to open from November)</p>
             <p className="mt-2 text-sm text-muted-foreground">
               {filteredRoles.length} of {careers.roles.length} roles
             </p>

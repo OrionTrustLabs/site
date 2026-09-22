@@ -11,8 +11,8 @@
       "remoteDetails": "Work from anywhere with overlap across EU / US / APAC when collaboration matters.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["MPC", "ZK / STARKs", "Applied cryptography"],
-      "summary": "Design and implement the cryptographic primitives behind Orion's attestation and custody stack — from protocol design through production-ready libraries.",
-      "about": "As a founding cryptography engineer you will own the research-to-implementation path for threshold signatures, zero-knowledge attestation circuits, and formal arguments of security. You will work closely with protocol and product engineers to turn proofs into systems institutions can rely on.",
+      "summary": "Support high-assurance audits with deep cryptography — ZK, MPC, and formal arguments applied to client systems and internal research.",
+      "about": "As a founding cryptography engineer you will strengthen Orion's audit practice on the hardest problems: proof systems, key ceremonies, and protocol math that generic checklists miss. You partner with auditors to validate designs and document risks clients can act on.",
       "responsibilities": [
         "Design and specify MPC / threshold signing schemes (GG20, CGGMP21 and successors) for institutional custody",
         "Prototype and harden STARK-based circuits for proofs of reserve, solvency, and compliance state",
@@ -52,8 +52,8 @@
       "remoteDetails": "Remote-first with async-friendly rituals. Core collaboration windows are flexible; we gather in person for deep work a few times a year.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["MPC", "Distributed systems", "Rust / Go"],
-      "summary": "Build the distributed signing cluster, policy quorum engine, and settlement pathways that turn cryptographic designs into reliable institutional infrastructure.",
-      "about": "You will be a founding protocol engineer responsible for the systems that run Orion's MPC signing nodes, enforce policy quorums, and settle with cryptographic receipts. Expect ownership from networking and reliability through API surfaces that design partners will integrate against.",
+      "summary": "Build internal tooling and analysis pipelines that help auditors review complex protocol code faster and with fewer blind spots.",
+      "about": "You will be a founding protocol engineer supporting the audit team — reproducible environments, fork tests, and automation around scope ingestion, diff review, and finding verification. Your work makes every engagement more consistent and defensible.",
       "responsibilities": [
         "Implement and operate t-of-n MPC signing clusters with clear failure and recovery semantics",
         "Build the policy engine for approvals, time locks, and hardware-attested signers",
@@ -84,36 +84,77 @@
       ]
     },
     {
-      "slug": "smart-contract-engineer",
-      "title": "Smart Contract Engineer",
-      "team": "Protocol",
+      "slug": "smart-contract-security-auditor",
+      "title": "Smart Contract Security Auditor",
+      "team": "Security",
       "location": "Remote",
       "type": "Full-time",
       "remoteOption": "Fully remote",
-      "remoteDetails": "Fully remote. Prefer meaningful overlap with protocol and security partners; timezone is flexible within that constraint.",
+      "remoteDetails": "Fully remote. Overlap with client kickoffs and report reviews; flexible timezone within client delivery windows.",
+      "compensation": "Competitive cash + meaningful founding equity",
+      "stack": ["Solidity", "Foundry", "Threat modeling"],
+      "summary": "Lead smart contract audits end to end — from scope and threat models to severity-ranked findings clients can fix before mainnet.",
+      "about": "This is Orion's core role. You review client Solidity codebases with an adversarial mindset, write clear reports, and partner with teams through remediation. You are not shipping a custody product; you are making their contracts safer.",
+      "responsibilities": [
+        "Perform manual smart contract reviews across DeFi, infrastructure, and institutional codebases",
+        "Produce threat models, findings, and proof-of-concept exploits where appropriate",
+        "Run and interpret automated analysis (fuzzing, static analysis) to support manual review",
+        "Present results to client engineering and leadership; support remediation Q&A",
+        "Contribute to Orion audit standards, checklists, and internal knowledge base"
+      ],
+      "requirements": [
+        "Deep Solidity / EVM expertise and a track record finding high-impact vulnerabilities",
+        "Experience delivering professional audit or security review reports",
+        "Ability to communicate risk clearly to both engineers and non-technical stakeholders",
+        "Comfort with Foundry or equivalent for validation and PoC development",
+        "Integrity and discretion when handling unreleased client code"
+      ],
+      "niceToHave": [
+        "Prior work at a recognized audit firm or as an independent auditor",
+        "Experience with upgradeable proxies, cross-chain bridges, or oracle-heavy systems",
+        "Public research, CTF wins, or disclosed bug bounties",
+        "Familiarity with formal verification or symbolic execution tooling"
+      ],
+      "benefits": [
+        "Meaningful founding equity",
+        "Flexible PTO and remote-first culture",
+        "Budget for conferences, training, and research time",
+        "Home-office stipend",
+        "Health coverage as we formalize benefits",
+        "Direct impact on ecosystem safety"
+      ]
+    },
+    {
+      "slug": "smart-contract-engineer",
+      "title": "Senior Smart Contract Auditor (Foundry)",
+      "team": "Security",
+      "location": "Remote",
+      "type": "Full-time",
+      "remoteOption": "Fully remote",
+      "remoteDetails": "Fully remote. Prefer meaningful overlap with audit leads and clients during active engagements.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["Solidity", "Foundry", "EVM"],
-      "summary": "Own the on-chain settlement and attestation surfaces that institutions will trust with real capital — Solidity at the core, adversarial review as a habit.",
-      "about": "You will design, implement, and harden the smart contracts behind Orion's settlement rails and attestation anchors. This is not greenfield-for-demo work: every public function is a liability surface. You will set the bar for upgrade strategy, invariant testing, and audit readiness while the product is still taking shape — which means your decisions compound.",
+      "summary": "Deliver deep Foundry-backed audit work — invariants, fuzz campaigns, and PoCs that turn subtle Solidity bugs into actionable findings.",
+      "about": "You extend Orion's audit bench with elite Foundry practice: building harnesses, fuzzing stateful systems, and validating fixes. You spend most of your time on client engagements, not shipping Orion-owned protocol products.",
       "responsibilities": [
-        "Design and ship Solidity contracts for settlement, receipts, and on-chain attestation anchors",
-        "Define upgrade, pause, and access-control patterns that survive institutional due diligence",
-        "Build Foundry-based invariant, fuzz, and differential test suites as first-class deliverables",
-        "Partner with cryptography and protocol engineers so off-chain proofs and on-chain verification stay coherent",
-        "Lead audit preparation: threat models, known risks, and remediation with external reviewers"
+        "Execute manual review on assigned audit modules and integration surfaces",
+        "Build Foundry fuzz and invariant suites to stress client logic during engagements",
+        "Document reproducible exploit paths and recommended remediations",
+        "Re-review client patches during remediation phases",
+        "Improve shared audit templates and testing patterns for the team"
       ],
       "requirements": [
         "Deep Solidity / EVM fluency — storage layout, call semantics, and gas economics are second nature",
-        "Production experience shipping contracts that held real value or passed serious security review",
-        "Strong testing discipline with Foundry (or equivalent) including fuzzing and invariant strategies",
-        "Comfort writing precise specs and reviewing PRs for subtle footguns",
-        "Bias toward minimal surface area and explicit trust assumptions"
+        "Audit or security review experience on production smart contracts",
+        "Strong testing discipline with Foundry including fuzzing and invariant strategies",
+        "Clear writing in reports and finding descriptions",
+        "Bias toward evidence — every critical claim backed by a PoC or trace"
       ],
       "niceToHave": [
-        "Prior custody, settlement, or DeFi protocol work under regulatory or institutional constraints",
+        "DeFi, bridges, or governance-heavy codebase experience",
         "Experience with formal verification tooling (Certora, Halmos, or similar)",
         "Familiarity with account abstraction, multicall patterns, or cross-chain messaging risks",
-        "Published postmortems, audit reports, or open-source contract libraries"
+        "Published audit writeups or disclosed vulnerabilities"
       ],
       "benefits": [
         "Meaningful founding equity",
@@ -134,8 +175,8 @@
       "remoteDetails": "Remote-first across timezones. Pair closely with Solidity engineers; async-first with scheduled deep-dive sessions for release and audit cycles.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["Hardhat", "TypeScript", "Solidity", "EVM tooling"],
-      "summary": "Build the Hardhat-centered developer and CI toolchain that keeps Orion's Solidity stack fast, reproducible, and audit-ready as complexity grows.",
-      "about": "Great contracts die in bad tooling. You will own Hardhat configuration, plugins, deployment pipelines, mainnet-fork testing, and the TypeScript glue that makes protocol work feel sharp for senior engineers. Your job is to remove friction from compile → test → simulate → deploy → verify — without sacrificing safety.",
+      "summary": "Build the Hardhat-centered toolchain auditors use on every engagement — reproducible forks, analysis hooks, and client repo onboarding.",
+      "about": "You own the Hardhat environments Orion auditors run against client codebases: plugins, fork networks, static analysis integration, and CI patterns that make reviews fast and repeatable. Your users are auditors, not a product engineering org shipping custody software.",
       "responsibilities": [
         "Own Hardhat workspaces, networks, plugins, and reproducible local / CI environments",
         "Build TypeScript tooling for deployments, upgrades, verification, and artifact publishing",
@@ -175,7 +216,7 @@
       "remoteDetails": "Fully remote with scheduled pairing during design, audit, and release windows. Timezone flexible if you can overlap with Protocol for critical reviews.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["Solidity", "Hardhat", "TypeScript", "EVM"],
-      "summary": "Write and harden production Solidity with Hardhat as your primary stack — tests, forks, deployments, and verification that institutional partners can trust.",
+      "summary": "Support audits with Hardhat-first Solidity analysis — fork tests, scenario scripts, and verification flows that prove findings on client code.",
       "about": "This role is for a senior Solidity engineer who ships contracts in Hardhat day-to-day: expressive TypeScript tests, mainnet forks, upgrade scripts, and clean verification flows. You will own protocol features end to end inside the Hardhat workspace — distinct from our Foundry-leaning Smart Contract Engineer track and from the Hardhat tooling role that builds the platform itself.",
       "responsibilities": [
         "Implement Solidity contracts for settlement, attestation anchors, and related protocol surfaces in Hardhat",
@@ -216,8 +257,8 @@
       "remoteDetails": "Remote-first with intentional overlap for architecture and hiring. Expect occasional travel for partner meetings and team offsites.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["React", "Node.js", "System design"],
-      "summary": "Set technical direction for a founding product org — architecture, delivery cadence, and the quality bar seniors expect when the stakes are institutional trust.",
-      "about": "Orion needs a tech lead who has already operated at senior+ altitude: someone who can hold product intent, security constraints, and shipping pressure in the same frame. You will shape how React clients, Node.js services, and protocol interfaces fit together, hire and mentor strong ICs, and keep the roadmap honest while we talk to design partners.",
+      "summary": "Set technical direction for Orion's audit practice — delivery systems, internal tooling, and the quality bar clients expect from a security firm.",
+      "about": "Orion needs a tech lead who can scale a security company, not a custody product. You will shape how auditors work — report pipelines, client portals, and internal automation — while mentoring senior ICs and keeping engagements on time without cutting review depth.",
       "responsibilities": [
         "Own end-to-end architecture across React surfaces, Node.js APIs, and protocol integration boundaries",
         "Drive technical roadmap with founders — sequence risk, cut scope surgically, protect long-term leverage",
@@ -257,8 +298,8 @@
       "remoteDetails": "Fully remote. Collaborate async by default with live sessions for design reviews and launches.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["React", "Node.js", "TypeScript"],
-      "summary": "Ship the product spine end to end — React experiences and Node.js services that make custody, settlement, and attestation usable for serious operators.",
-      "about": "You thrive owning features across the boundary: typed APIs, resilient Node.js services, and React interfaces that feel calm under complexity. At Orion you will connect institutional workflows to cryptographic infrastructure without burying users in protocol jargon — and you will care as much about failure modes as happy paths.",
+      "summary": "Build internal and client-facing tools that support audit delivery — engagement dashboards, report workflows, and secure collaboration.",
+      "about": "You thrive owning features across React and Node.js that help auditors and clients move from scope to signed report. At Orion you are enabling a security company — not shipping on-chain custody or settlement products.",
       "responsibilities": [
         "Design and implement full-stack features spanning React clients and Node.js backends",
         "Model APIs and domain flows for custody policies, settlement status, and attestation artifacts",
@@ -298,8 +339,8 @@
       "remoteDetails": "Fully remote with design-pairing sessions scheduled for mutual overlap. No office requirement.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["React", "TypeScript", "Design systems"],
-      "summary": "Craft the React interface layer for institutional operators — precise, fast, and trustworthy enough for high-stakes workflows.",
-      "about": "Institutional products fail when the UI is vague. You will build React experiences that make policy, settlement, and attestation state legible — dense when needed, quiet when not. You care about interaction design, performance, accessibility, and the difference between looking polished and being operable under pressure.",
+      "summary": "Design and build React experiences for audit delivery — client portals, finding trackers, and report presentation that feel precise under pressure.",
+      "about": "Security reports fail when the UI hides severity or scope. You will make audit status, findings, and remediation legible for engineers and executives — calm, dense when needed, and trustworthy.",
       "responsibilities": [
         "Build and evolve React + TypeScript interfaces for operator and design-partner workflows",
         "Translate complex protocol and custody concepts into clear information architecture",
@@ -339,8 +380,8 @@
       "remoteDetails": "Fully remote. On-call expectations remain fair and compensated as production systems launch.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["Node.js", "TypeScript", "APIs"],
-      "summary": "Build the Node.js services that enforce policy, orchestrate settlement, and expose clean APIs under institutional scrutiny.",
-      "about": "You will own backend systems where correctness beats cleverness. Policy engines, attestation pipelines, and settlement orchestration need APIs that are boring in the best way: typed, observable, and hard to misuse. You will make Node.js services that seniors trust to run close to cryptographic and custody boundaries.",
+      "summary": "Build Node.js services for audit operations — secure artifact storage, engagement APIs, and integrations auditors rely on daily.",
+      "about": "You will own backend systems where confidentiality and integrity matter. Client repos, findings, and report drafts need APIs that are boring in the best way: typed, observable, and hard to misuse.",
       "responsibilities": [
         "Design and implement Node.js + TypeScript services and APIs for core product workflows",
         "Encode authorization, policy checks, and audit trails as first-class system behavior",
@@ -380,8 +421,8 @@
       "remoteDetails": "Fully remote with scheduled design critiques and pairing across engineering. Occasional travel for partner workshops and brand shoots.",
       "compensation": "Competitive cash + meaningful founding equity",
       "stack": ["Product design", "Design systems", "React handoff"],
-      "summary": "Define the visual and interaction language of institutional trust — product design that makes cryptographic infrastructure feel clear, calm, and credible.",
-      "about": "Orion's brand and product must signal seriousness without sliding into generic fintech theater. You will own end-to-end product design for operator experiences and key marketing surfaces, working side-by-side with React engineers so what ships matches the intent. Seniors should feel the craft immediately.",
+      "summary": "Define Orion's brand and audit-client experience — design that signals serious security work without generic fintech theater.",
+      "about": "You will own marketing surfaces and the client audit journey — from engagement intake to report delivery — working with engineers so what ships matches Orion's position as a smart contract security company.",
       "responsibilities": [
         "Lead product design for custody, settlement, and attestation workflows — flows, states, and edge cases",
         "Build and maintain a coherent design system that engineers can implement faithfully in React",

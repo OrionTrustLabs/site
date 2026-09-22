@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Orion Trust Labs - Blockchain Infrastructure & Trust" },
-      { name: "description", content: "Orion Trust Labs builds trust-minimized blockchain infrastructure, custody, and settlement rails for institutions." },
+      { title: "Orion Trust Labs - Smart Contract Security & Audits" },
+      { name: "description", content: "Orion Trust Labs is a security company focused on smart contract auditing — helping teams ship safer on-chain systems." },
       { name: "author", content: "Orion Trust Labs" },
       { property: "og:title", content: "Orion Trust Labs" },
-      { property: "og:description", content: "Trust-minimized blockchain infrastructure for institutions." },
+      { property: "og:description", content: "Smart contract security and auditing." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -133,8 +133,8 @@ function RootComponent() {
 function SiteHeader() {
   const nav = [
     { to: "/", label: "Home" },
-    { to: "/solutions", label: "Solutions" },
-    { to: "/technology", label: "Technology" },
+    { to: "/solutions", label: "Services" },
+    { to: "/technology", label: "Methodology" },
     { to: "/about", label: "About" },
     { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },
@@ -143,9 +143,6 @@ function SiteHeader() {
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/70 border-b border-border">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="relative inline-flex h-8 w-8 items-center justify-center rounded-md" style={{ background: "var(--gradient-primary)" }}>
-            <span className="h-3 w-3 rounded-full bg-background" />
-          </span>
           <span className="font-semibold tracking-tight text-foreground">Orion Trust Labs</span>
         </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm">
@@ -185,16 +182,16 @@ function SiteFooter() {
             <span className="font-semibold text-foreground">Orion Trust Labs</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground max-w-xs">
-            Trust-minimized infrastructure for the next era of digital assets.
+            Smart contract security and audits for teams that cannot afford to ship blind.
           </p>
         </div>
-        <FooterCol title="Company" links={[["About", "/about"], ["Careers", "/careers"], ["Solutions", "/solutions"], ["Technology", "/technology"]]} />
-        <FooterCol title="Resources" links={[["Contact", "/contact"], ["Docs", "/technology"], ["Security", "/technology"]]} />
+        <FooterCol title="Company" links={[["About", "/about"], ["Careers", "/careers"], ["Solutions", "/solutions"], ["Methodology", "/technology"]]} />
+        <FooterCol title="Resources" links={[["Contact", "/contact"], ["Audit process", "/technology"], ["Security", "/contact"]]} />
         <div>
           <h4 className="text-sm font-semibold text-foreground">Stay in orbit</h4>
-          <p className="mt-2 text-xs text-muted-foreground">Research and product updates.</p>
+          <p className="mt-2 text-xs text-muted-foreground">Security research and audit updates.</p>
           <form className="mt-3 flex gap-2">
-            <input type="email" placeholder="you@company.com" className="flex-1 rounded-md bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-2 focus:ring-ring" />
+            <input type="email" placeholder="starting in November" className="flex-1 rounded-md bg-input px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground border border-border focus:outline-none focus:ring-2 focus:ring-ring" disabled/>
             <button type="button" className="rounded-md px-3 py-2 text-sm font-medium text-primary-foreground" style={{ background: "var(--gradient-primary)" }}>Join</button>
           </form>
         </div>
